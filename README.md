@@ -9,11 +9,12 @@ kubectl get nodes
 kubectl get pods,deploy
 ```
 
-
 ## Additional setups required
 - terraform apply sonarqube.tf
 - Install sonarqube plugin in Jenkins
-- Sonarqube default login, `{username:admin , password:admin}`
+- Sonarqube default login, `{username:admin , password:adin}`
 - Add webhook to sonarqube in the format `https://<jenkins_server_url>/sonarqube-webhook/`
 - restart docker after usermod `sudo systemctl ...     `
 
+## Additional TODO's
+- Add github webhook
