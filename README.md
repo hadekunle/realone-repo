@@ -1,4 +1,4 @@
-# demo-repository
+# Initial steps
 - Go to kubernetes folder and build the eks-cluster.tf 
 - Make sure to include your own keypair
 - After build is completed, run the commands below
