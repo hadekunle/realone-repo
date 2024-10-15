@@ -15,5 +15,5 @@ kubectl get pods,deploy
 - Install sonarqube plugin in Jenkins
 - Sonarqube default login, `{username:admin , password:admin}`
 - Add webhook to sonarqube in the format `https://<jenkins_server_url>/sonarqube-webhook/`
-- restart docker after usermod `sudo systemctl ... `
+- restart docker after usermod `sudo systemctl ...   `
 
