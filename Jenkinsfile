@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         VERSION = "${env.BUILD_ID}"
-        AWS_ACCOUNT_ID= "902384303262"
+        AWS_ACCOUNT_ID= "902384303262" 
         // AWS_ACCOUNT_ID= credentials('account_id')
         AWS_DEFAULT_REGION="us-east-1"
         IMAGE_REPO_NAME="jenkins-pipeline"
