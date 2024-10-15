@@ -24,19 +24,19 @@ pipeline {
         
             }        
 
-      //   stage('Code Qualty Scan') {
+        stage('Code Qualty Scan') {
 
-      //      steps {
-      //             withSonarQubeEnv('sonar-scanner') {
-      //        sh "mvn -f SampleWebApp/pom.xml sonar:sonar"      
-      //          }
-      //       }
-      //  }
-      //   stage('Quality Gate') {
-      //     steps {
-      //            waitForQualityGate abortPipeline: true
-      //         }
-      //   }     
+           steps {
+                  withSonarQubeEnv('sonar-scanner') {
+             sh "mvn -f SampleWebApp/pom.xml sonar:sonar"      
+               }
+            }
+       }
+        stage('Quality Gate') {
+          steps {
+                 waitForQualityGate abortPipeline: true
+              }
+        }     
         
         
          stage('Logging into AWS ECR') {
