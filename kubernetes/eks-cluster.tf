@@ -1,6 +1,7 @@
 module "eks" {
-  source                         = "terraform-aws-modules/eks/aws"
-  version                        = "~> 19.0"
+  source = "terraform-aws-modules/eks/aws"
+  #commented out to use latest version
+  # version                        = "~> 19.0" 
   cluster_endpoint_public_access = true
   cluster_addons = {
     coredns = {
@@ -14,8 +15,9 @@ module "eks" {
     }
   }
 
-  cluster_name    = "appify-eks-cluster"
-  cluster_version = "1.27"
+  cluster_name = "appify-eks-cluster"
+  #commented out to use latest version
+  # cluster_version = "1.27" 
 
   subnet_ids = module.appify-vpc.private_subnets
   vpc_id     = module.appify-vpc.vpc_id
