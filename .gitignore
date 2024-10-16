@@ -1,2 +1,5 @@
 **/*.tfstate*
 **/*.terraform*
+s3_delete.sh
+bucket_list.txt
+not_region.sh 

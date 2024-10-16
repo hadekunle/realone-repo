@@ -9,11 +9,11 @@ variable "public_subnet_cidr_blocks" {}
 data "aws_availability_zones" "available" {}
 
 
-module "myAppp-vpc" {
+module "appify-vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.0.0"
 
-  name            = "myAppp-vpc"
+  name            = "appify-vpc"
   cidr            = var.vpc_cidr_block
   private_subnets = var.private_subnet_cidr_blocks
   public_subnets  = var.public_subnet_cidr_blocks
@@ -24,16 +24,16 @@ module "myAppp-vpc" {
   enable_dns_hostnames = true
 
   tags = {
-    "kubernetes.io/cluster/myAppp-eks-cluster" = "shared"
+    "kubernetes.io/cluster/appify-eks-cluster" = "shared"
   }
 
   public_subnet_tags = {
-    "kubernetes.io/cluster/myAppp-eks-cluster" = "shared"
+    "kubernetes.io/cluster/appify-eks-cluster" = "shared"
     "kubernetes.io/role/elb"                   = 1
   }
 
   private_subnet_tags = {
-    "kubernetes.io/cluster/myAppp-eks-cluster" = "shared"
+    "kubernetes.io/cluster/appify-eks-cluster" = "shared"
     "kubernetes.io/role/internal-elb"          = 1
   }
 

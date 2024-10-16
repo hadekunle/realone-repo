@@ -4,7 +4,7 @@
 - After build is completed, run the commands below
 
 ```bash
-aws eks update-kubeconfig --name myAppp-eks-cluster --region us-east-1
+aws eks update-kubeconfig --name appify-eks-cluster --region us-east-1
 kubectl get nodes
 kubectl get pods,deploy
 ```
